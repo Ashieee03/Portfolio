@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
@@ -45,12 +46,107 @@ const softwareIcons = [
   ];
 
   return (
-    <section className="relative w-full bg-[#a5b85d] overflow-hidden py-20">
-      {/* Background elements */}
+    <section className="relative w-full bg-gradient-to-b from-[#030e02] via-[#1a2f0f] via-[25%] via-[#2e4c1a] via-[50%] via-[#4a6b2d] via-[75%] to-[#a5b85d] overflow-hidden py-20 h-[1373px]">
+      {/* Enhanced animated background elements with smooth gradient */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute w-[180vw] h-[80vh] top-1/4 left-1/2 -translate-x-1/2 rounded-full shadow-[inset_14px_4px_4px_-1px_#00000040,0px_4px_4px_#00000040] bg-gradient-to-b from-[#636e38] to-[#bfd46c] opacity-60" />
-        <div className="absolute w-[40vw] h-[40vw] top-10 left-1/4 bg-[#eaec9b] rounded-full blur-3xl opacity-40" />
-        <div className="absolute w-[70vw] h-[40vw] top-1/3 left-1/2 -translate-x-1/2 bg-[#2f4a26] rounded-full shadow-[inset_14px_4px_4px_-1px_#00000040,0px_4px_4px_#00000040] opacity-40" />
+        {/* Main gradient background - smooth dark to light transition */}
+        <motion.div 
+          className="absolute w-[2729.94px] h-[1781px] left-[-672.47px] top-[104px] rounded-full shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shadow-[inset_14px_4px_4px_-1px_rgba(0,0,0,0.25)] opacity-40"
+          style={{
+            background: 'linear-gradient(180deg, #030e02 0%, #1a2f0f 25%, #2e4c1a 50%, #4a6b2d 75%, #a5b85d 100%)'
+          }}
+          animate={{ 
+            scale: [1, 1.05, 1],
+            rotate: [0, 2, 0]
+          }}
+          transition={{ 
+            duration: 15, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+        />
+        
+        {/* Additional smooth gradient overlay for depth */}
+        <motion.div 
+          className="absolute inset-0 rounded-full opacity-20"
+          style={{
+            background: 'radial-gradient(ellipse at 50% 30%, #030e02 0%, transparent 50%), linear-gradient(180deg, #030e02 0%, #1a2f0f 20%, #2e4c1a 40%, #4a6b2d 70%, #a5b85d 100%)'
+          }}
+          animate={{ 
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{ 
+            duration: 12, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+        />
+        
+        {/* Blurred background elements for smooth transitions */}
+        <motion.div 
+          className="absolute w-[797px] h-[808px] left-[-261px] top-[-335px] rounded-full blur-[200px] opacity-15"
+          style={{
+            background: 'radial-gradient(circle, #4a6b2d 0%, #a5b85d 50%, transparent 70%)'
+          }}
+          animate={{ 
+            y: [0, -30, 0], 
+            x: [0, 20, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ 
+            duration: 8, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+        />
+        
+        {/* Top dark overlay for text contrast */}
+        <motion.div 
+          className="absolute w-[2441px] h-[600px] left-[-523px] top-[36px] rounded-full shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] shadow-[inset_14px_4px_4px_-1px_rgba(0,0,0,0.25)] opacity-30"
+          style={{
+            background: 'linear-gradient(180deg, #030e02 0%, #1a2f0f 60%, transparent 100%)'
+          }}
+          animate={{ 
+            y: [0, 25, 0], 
+            x: [0, -15, 0]
+          }}
+          transition={{ 
+            duration: 10, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+        />
+        
+        {/* Bottom light elements for smooth transition */}
+        <motion.div 
+          className="absolute w-[762px] h-[764px] left-[-70px] top-[800px] rounded-full blur-[103.50px] opacity-25"
+          style={{
+            background: 'radial-gradient(circle, #a5b85d 0%, #c5d67d 50%, transparent 70%)'
+          }}
+          animate={{ y: [0, -25, 0], x: [0, 15, 0] }}
+          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute w-[815px] h-[826px] left-[-252px] top-[900px] rounded-full blur-[200px] opacity-15"
+          style={{
+            background: 'linear-gradient(180deg, #a5b85d 0%, #c5d67d 50%, transparent 100%)'
+          }}
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ duration: 13, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute w-[618px] h-[620px] left-[-151px] top-[1000px] rounded-full blur-[103.50px] opacity-20"
+          style={{
+            background: 'radial-gradient(circle, #c5d67d 0%, #e5f0c8 50%, transparent 70%)'
+          }}
+          animate={{ y: [0, 30, 0], x: [0, -20, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
+      {/* Arrow Icon */}
+      <div className="absolute left-[1424px] top-[1373px] text-black text-[256px] font-normal font-['Astro_Futuristic_Font'] leading-none">
+        v
       </div>
 
       {/* About me label */}

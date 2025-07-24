@@ -71,12 +71,12 @@ const The7amSection: React.FC = () => {
         className="absolute w-96 h-96 left-[449px] top-[422px] rounded-[32px] shadow-lg"
       />
       <img
-        src="/images/the7am/Rectangle-2.png"
+        src="/images/the7am/Rectangle-1.png"
         alt="7am Mockup 3"
         className="absolute w-96 h-[548px] left-[49px] top-[412px] rounded-[33px] shadow-lg"
       />
       <img
-        src="/images/the7am/Rectangle-1.png"
+        src="/images/the7am/Rectangle-2.png"
         alt="7am Mockup 4"
         className="absolute w-[533px] h-96 left-[857px] top-[422px] rounded-[32px] shadow-lg"
       />
